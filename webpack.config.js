@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -10,6 +11,12 @@ module.exports = {
     library: 'XUI',
     libraryTarget: 'umd'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Belial-UI',
+      template: 'index.html'
+    })
+  ],
   module: {
     rules: [
       {
