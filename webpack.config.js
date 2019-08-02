@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    libary: 'XUI',
+    library: 'XUI',
     libraryTarget: 'umd'
   },
   module: {
