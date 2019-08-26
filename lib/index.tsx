@@ -1,12 +1,5 @@
-// import React from "react";
-// import ReactDom from "react-dom";
-// import Button from "./button";
+import React from "react";
+import ReactDom from "react-dom";
+import Icon from "./Icon";
 
-// ReactDom.render(<Button />, document.getElementById("root"));
-
-import Button from './button';
-
-const a = 1
-console.log('hi')
-
-export {Button, a};
+ReactDom.render(<Icon name="wechat"/>, document.getElementById("root"));
