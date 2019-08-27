@@ -1,5 +1,18 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import ReactDom from "react-dom";
 import Icon from "./Icon";
 
-ReactDom.render(<Icon name="wechat"/>, document.getElementById("root"));
+const fn: MouseEventHandler<SVGElement> = e => {
+  console.log(e);
+};
+
+ReactDom.render(
+  <Icon
+    name="wechat"
+    onClick={fn}
+    onMouseEnter={() => {
+      console.log("mouseEnter");
+    }}
+  />,
+  document.getElementById("root")
+);
