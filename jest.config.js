@@ -2,7 +2,13 @@
 module.exports = {
   verbose: true,
   clearMocks: false,
-  collectCoverage: false,
+
+  // 收集测试报告
+  collectCoverage: true,
+  collectCoverageFrom: ["lib/**/*.{ts,tsx}","!**/node_modules/**"], // 从哪些文件生成报告
+  coverageDirectory: "coverage", // 生成报告存放目录
+  coverageReporters: ["lcov", "text"], // 生成的报告类型
+  
   reporters: ["default"],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
