@@ -9,7 +9,7 @@ module.exports = {
   coverageDirectory: "coverage", // 生成报告存放目录
   coverageReporters: ["lcov", "text"], // 生成的报告类型
   
-  reporters: ["default"],
+  reporters: ["default", "jest-junit"],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
   globals: {
