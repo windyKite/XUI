@@ -9,31 +9,31 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
-        paths:
-          - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+            key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
             - node_modules
   build: 
-  <<: *defaults
-  steps:
-    - checkout
-    - attach_workspace:
-      at: .
-    - run: yarn build
-    - persist_to_workspace:
-      root: .
-      paths:
-        - dist
-        - package.json
-        - LICENSE
-        - README.md
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+            - package.json
+            - LICENSE
+            - README.md
   test:
     <<: *defaults
     steps:
