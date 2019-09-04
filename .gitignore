@@ -1,3 +1,4 @@
+test-results/
 .idea/
 # 编译生成的文件
 dist
