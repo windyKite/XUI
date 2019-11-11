@@ -5,7 +5,7 @@ import "./Button.scss"
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: string;
-  appearance?: "default" | "primary" | "link" | "subtle" | "ghost";
+  appearance?: "default" | "primary" | "subtle" | "ghost";
   disabled?: boolean;
   href?: string;
   size?: "large" | "small";
